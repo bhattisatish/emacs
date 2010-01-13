@@ -60,6 +60,17 @@
 (add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 
+;; Markdown
+(defun markdown-custom ()
+  "markdown-mode-hook"
+  (setq markdown-command "markdown | smartypants"))
+(add-hook 'markdown-mode-hook '(lambda() (markdown-custom)))
+
+(autoload 'markdown-mode "markdown-mode.el"
+  "Major mode for editing Markdown files" t)
+(setq auto-mode-alist
+      (cons '("\\.md" . markdown-mode) auto-mode-alist))
+
 ;; Ignore Rubinius bytecode
 (add-to-list 'completion-ignored-extensions ".rbc")
 
