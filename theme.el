@@ -4,8 +4,8 @@
 ;; (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 (require 'color-theme)
-(require 'color-theme-gtk-ide)
-(color-theme-gtk-ide)
+(require 'color-theme-twilight)
+(color-theme-twilight)
 
 (setq mac-allow-anti-aliasing t)
 
